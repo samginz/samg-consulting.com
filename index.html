@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG Consulting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        header {
+            background: #004080;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff9900;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #004080;
+            margin-bottom: 20px;
+        }
+        .services, .case-studies {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .service, .case-study {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form button {
+            padding: 10px 20px;
+            background: #004080;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media(max-width: 700px){
+            .services, .case-studies {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header / Hero -->
+<header>
+    <h1>Where Results Exceed Expectations</h1>
+    <p>Practical, hands-on operational solutions for small and mid-sized businesses.</p>
+    <a href="#contact" class="btn">Schedule a Consultation</a>
+</header>
+
+<!-- About -->
+<section id="about">
+    <h2>About SG Consulting</h2>
+    <p>SG Consulting helps businesses identify bottlenecks, streamline operations, and implement solutions that drive measurable results. We don’t just give recommendations—we make them happen.</p>
+    <p>We specialize in helping small to mid-sized companies (revenue $5–75M, 15–150 employees) uncover hidden inefficiencies and implement solutions that stick. Our approach is ethical, analytical, and collaborative, bringing fresh, modern systems thinking to every project.</p>
+</section>
+
+<!-- Services -->
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Operational Analysis</h3>
+            <p>Deep dives into departments, uncovering inefficiencies and hidden costs.</p>
+        </div>
+        <div class="service">
+            <h3>Process Optimization</h3>
+            <p>Streamline tasks, reduce duplication, and create KPI-driven accountability.</p>
+        </div>
+        <div class="service">
+            <h3>Automation & Systems</h3>
+            <p>Implement modern systems that increase efficiency, transparency, and scalability.</p>
+        </div>
+        <div class="service">
+            <h3>Hands-On Implementation</h3>
+            <p>We don’t just advise—we execute, or bring in our network to get solutions implemented quickly and effectively.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Case Studies / Results -->
+<section id="case-studies">
+    <h2>Proven Results</h2>
+    <div class="case-studies">
+        <div class="case-study">
+            <h3>Healthcare</h3>
+            <p>Streamlined contract and compliance workflows, reducing errors by 25%.</p>
+        </div>
+        <div class="case-study">
+            <h3>Government Contracting</h3>
+            <p>Identified high-value opportunities and aligned strengths for competitive bids.</p>
+        </div>
+        <div class="case-study">
+            <h3>Private Sector</h3>
+            <p>Improved finance platform operations, enhanced reporting, and KPI tracking.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="mailto:sam@sgconsulting.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="company" placeholder="Company Name">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 SG Consulting | Where Results Exceed Expectations</p>
+</footer>
+
+</body>
+</html>
