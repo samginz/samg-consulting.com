@@ -1,4 +1,695 @@
-o revenue producing work.</strong>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG Consulting | Operations and Automation</title>
+    <meta name="description" content="SG Consulting helps healthcare, insurance, distribution, and service businesses fix bottlenecks, redesign workflows, and implement practical automation that actually gets used.">
+    <style>
+        :root {
+            --color-primary: #0f4c81;
+            --color-primary-light: #1c74b8;
+            --color-accent: #ffb300;
+            --color-accent-soft: #ffe08a;
+            --color-bg: #f5f7fb;
+            --color-bg-soft: #eef3fb;
+            --color-text: #222;
+            --color-muted: #6b7280;
+            --radius-card: 16px;
+            --shadow-soft: 0 10px 25px rgba(15, 76, 129, 0.12);
+            --transition-fast: 0.18s ease-out;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.7;
+            color: var(--color-text);
+            background: white;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation */
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(10, 32, 70, 0.85);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            font-size: 1.05rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-cta {
+            padding: 7px 14px;
+            border-radius: 999px;
+            background: var(--color-accent);
+            color: #1f2933;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.9;
+        }
+
+        /* Hero */
+
+        .hero {
+            background: radial-gradient(circle at top left, #27c5ff 0, #0f4c81 40%, #050b1a 100%);
+            color: white;
+            padding: 80px 20px 90px 20px;
+            text-align: center;
+        }
+
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(15, 76, 129, 0.5);
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(2.2rem, 3.2vw, 3rem);
+            letter-spacing: 0.01em;
+        }
+
+        .hero p {
+            margin-top: 16px;
+            font-size: 1.05rem;
+            color: #e5e7eb;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            margin-top: 26px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.98rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--color-accent);
+            color: #1f2933;
+            box-shadow: 0 12px 22px rgba(0, 0, 0, 0.22);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.92;
+        }
+
+        .btn-secondary {
+            background: rgba(15, 76, 129, 0.3);
+            color: #e5e7eb;
+            border: 1px solid rgba(156, 163, 175, 0.6);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(15, 76, 129, 0.5);
+        }
+
+        .hero-scroll {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #c7d2fe;
+            opacity: 0.8;
+        }
+
+        .hero-scroll span {
+            display: block;
+            font-size: 1.4rem;
+            margin-top: 4px;
+            animation: bounce 1.6s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(5px); }
+        }
+
+        /* Sections */
+
+        section {
+            padding: 70px 20px;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .section-heading h2 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--color-primary);
+        }
+
+        .section-heading p {
+            margin-top: 10px;
+            color: var(--color-muted);
+            font-size: 0.98rem;
+        }
+
+        /* About */
+
+        .about-text {
+            max-width: 750px;
+            margin: 0 auto 24px auto;
+            font-size: 1rem;
+            color: #374151;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .highlight-card {
+            background: var(--color-bg-soft);
+            border-radius: 999px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .highlight-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 999px;
+            background: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 8px rgba(15, 76, 129, 0.2);
+        }
+
+        /* Services */
+
+        .section-services {
+            background: var(--color-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--radius-card);
+            padding: 22px 22px 20px 22px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(209, 213, 219, 0.7);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px rgba(15, 76, 129, 0.18);
+            border-color: rgba(15, 76, 129, 0.4);
+        }
+
+        .card-icon-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            background: var(--color-accent-soft);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            color: #111827;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.97rem;
+            color: #4b5563;
+        }
+
+        /* Why SG */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        /* Results */
+
+        .section-results {
+            background: #e7f0ff;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: var(--radius-card);
+            padding: 22px 22px 20px 20px;
+            border-left: 5px solid var(--color-accent);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .result-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.05rem;
+        }
+
+        .result-card p {
+            margin: 0 0 6px 0;
+            font-size: 0.95rem;
+            color: #374151;
+        }
+
+        .result-card strong {
+            display: inline-block;
+            margin-top: 4px;
+            color: var(--color-primary);
+        }
+
+        /* Testimonials */
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius-card);
+            padding: 22px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(209, 213, 219, 0.9);
+        }
+
+        .testimonial-quote {
+            font-size: 0.97rem;
+            color: #374151;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: var(--color-muted);
+        }
+
+        /* Contact */
+
+        .section-contact {
+            background: linear-gradient(135deg, #0f4c81, #1c74b8);
+            color: white;
+        }
+
+        .section-contact .section-heading h2 {
+            color: white;
+        }
+
+        .section-contact .section-heading p {
+            color: #d1d5db;
+        }
+
+        .contact-layout {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .contact-list a {
+            color: #fef9c3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #020617;
+            color: #9ca3af;
+            text-align: center;
+            padding: 14px 16px 18px 16px;
+            font-size: 0.82rem;
+        }
+
+        footer a {
+            color: #e5e7eb;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 900px) {
+            .services-grid,
+            .why-grid,
+            .results-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav {
+                padding: 10px 16px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <div class="nav-logo">
+            SG Consulting
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#results">Results</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-cta">Book a call</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" id="top">
+    <div class="hero-inner">
+        <div class="hero-eyebrow">
+            <span>✔</span>
+            <span>From analysis to implementation</span>
+        </div>
+        <h1>Operations and automation that actually get implemented</h1>
+        <p>
+            SG Consulting helps healthcare, insurance, distribution, and other service driven businesses fix bottlenecks,
+            streamline workflows, and build practical systems that your team will actually use.
+        </p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Schedule a quick call</a>
+            <a href="#results" class="btn-secondary">View selected results</a>
+        </div>
+        <div class="hero-scroll">
+            <span>⌄</span>
+            Scroll to learn more
+        </div>
+    </div>
+</header>
+
+<section id="about">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>About SG Consulting</h2>
+            <p>Practical, hands on support to move your operations from friction to flow.</p>
+        </div>
+        <div class="about-text">
+            <p>
+                SG Consulting helps growing organizations uncover hidden inefficiencies, redesign workflows, and build
+                simple systems around the way they actually operate, not the way a slide deck says they should.
+            </p>
+            <p>
+                With experience across operations leadership, technology, and risk or insurance, we bridge strategy
+                and execution. Clients receive clear analysis, realistic recommendations, and hands on support so
+                new processes are implemented without overwhelming their teams.
+            </p>
+        </div>
+        <div class="about-highlights">
+            <div class="highlight-card">
+                <div class="highlight-icon">📊</div>
+                <div>More than 15 years in operations and technology leadership.</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🏥</div>
+                <div>Experience with healthcare, insurance, distribution, and public sector environments.</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🤝</div>
+                <div>From short assessments to hands on implementation work for key initiatives.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="section-services">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>What we do</h2>
+            <p>Focused support across analysis, process, automation, and implementation.</p>
+        </div>
+        <div class="services-grid">
+            <div class="card">
+                <div class="card-icon-circle">🔍</div>
+                <h3>Operational analysis</h3>
+                <p>
+                    Department by department reviews that map workflows, quantify waste, and identify quick wins and
+                    structural issues. You receive a clear picture of what is slowing you down and what to fix first.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon-circle">⚙️</div>
+                <h3>Process optimization</h3>
+                <p>
+                    Redesign tasks, handoffs, and approvals to reduce duplication and close gaps. We create simple
+                    procedures and KPI views so leaders can monitor performance and keep improvements in place.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon-circle">💡</div>
+                <h3>Automation and systems</h3>
+                <p>
+                    Select and implement tools, dashboards, and automations that remove manual work without creating
+                    complexity. This may include spreadsheets, Access, databases, cloud platforms, or integrations
+                    with systems you already use.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon-circle">🤲</div>
+                <h3>Hands on implementation</h3>
+                <p>
+                    We do not stop at the recommendation stage. We work with your staff, vendors, and partners to put
+                    new processes into production, train users, and adjust until the system is stable and self sustaining.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="why">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>Why SG Consulting</h2>
+            <p>What clients value when they bring us into their operations.</p>
+        </div>
+        <div class="why-grid">
+            <div class="card">
+                <h3>Operator first, consultant second</h3>
+                <p>
+                    Experience running operations and technology in real organizations, not only observing from the outside.
+                    We understand the tradeoffs, constraints, and practical realities your teams face.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Data and accountability built in</h3>
+                <p>
+                    Every engagement includes clear metrics, reporting, and ownership. You can see what improved,
+                    by how much, and who is responsible for keeping results on track.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Simple and practical solutions</h3>
+                <p>
+                    We look for the smallest change that creates a meaningful result. Often we begin with process
+                    and basic tools before recommending heavy platforms or complex system changes.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Flexible engagement</h3>
+                <p>
+                    From short diagnostic work to deeper implementation support, the scope is tailored to your size,
+                    budget, and urgency. We stay involved as needed to make sure changes are fully adopted.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="results" class="section-results">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>Selected results</h2>
+            <p>Examples of how structured operations work produces measurable improvements.</p>
+        </div>
+        <div class="results-grid">
+            <div class="result-card">
+                <h3>Healthcare operations</h3>
+                <p>
+                    Reworked visit tracking, compliance workflows, and communication between offices for a multi site
+                    homecare provider.
+                </p>
+                <p>
+                    Visibility into missed visits and follow up actions improved, and teams had clearer responsibilities.
+                </p>
+                <strong>Result: approximately 25 percent fewer contract and compliance errors.</strong>
+            </div>
+            <div class="result-card">
+                <h3>Government and public sector</h3>
+                <p>
+                    Supported a boutique insurance brokerage that serves municipalities and airports by aligning internal
+                    processes, data, and positioning for complex RFP work.
+                </p>
+                <p>
+                    Built reusable checklists, intake templates, and timelines that shortened response cycles and improved consistency.
+                </p>
+                <strong>Result: stronger, more repeatable RFP responses with clearer internal coordination.</strong>
+            </div>
+            <div class="result-card">
+                <h3>Distribution and logistics</h3>
+                <p>
+                    Analyzed order to delivery workflows for a distribution firm that relied on thin margins and time sensitive products.
+                </p>
+                <p>
+                    Identified delays, rework, and manual steps across departments, then implemented clearer handoffs and simple tracking.
+                </p>
+                <strong>Result: fewer errors and a clearer foundation for future automation projects.</strong>
+            </div>
+            <div class="result-card">
+                <h3>Professional services and agencies</h3>
+                <p>
+                    Designed reporting and automation around CRM, payroll, and analytics for service organizations that
+                    needed better visibility across locations.
+                </p>
+                <p>
+                    Leadership received consistent KPI views and spent less time building manual spreadsheets every month.
+                </p>
+                <strong>Result: more informed decisions and time returned to revenue producing work.</strong>
             </div>
         </div>
     </div>
@@ -21,5 +712,71 @@ o revenue producing work.</strong>
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-quote">
-                    “Sam significantly improved our operational efficiencies. He combines sha
+                    “Sam significantly improved our operational efficiencies. He combines sharp analysis with a proactive
+                    approach and does not hesitate to take on complex challenges directly. He is a strong asset to any
+                    project or team.”
+                </div>
+                <div class="testimonial-author">David, CEO</div>
+                <div class="testimonial-role">IT company</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    “Sam is one of the best people I have worked with. He stood up a back office quickly and helped the
+                    client generate revenue faster than expected. He asks smart questions and understands industries from
+                    healthcare to fintech.”
+                </div>
+                <div class="testimonial-author">Alan, CEO</div>
+                <div class="testimonial-role">Consulting firm</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    “Sam is exceptional at problem solving and performance optimization. He understands the drivers behind
+                    complex issues and breaks them into manageable steps. Through hands on work and coaching, he lifts
+                    the performance of the whole team.”
+                </div>
+                <div class="testimonial-author">Sean, CEO</div>
+                <div class="testimonial-role">Warranty company</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    “Sam is a doer, not just a talker. He is loyal, reliable, and highly responsive. He balances attention
+                    to detail with a clear view of strategy and delivers pragmatic solutions that drive value. His performance
+                    was consistently above expectations.”
+                </div>
+                <div class="testimonial-author">Ariel, Executive VP</div>
+                <div class="testimonial-role">Insurance company</div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section id="contact" class="section-contact">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>Let us talk</h2>
+            <p>
+                If you are dealing with bottlenecks, scattered systems, or processes that do not scale, a short conversation
+                is often enough to see whether SG Consulting can help. If it is not a fit, you will hear that as well.
+            </p>
+        </div>
+        <div class="contact-layout">
+            <ul class="contact-list">
+                <li>📞 Phone: <a href="tel:+19177234811">+1 917 723 4811</a></li>
+                <li>💬 WhatsApp: <a href="https://wa.me/19177234811" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+                <li>✉ Email: <a href="mailto:sam@samg-consulting.com">sam@samg-consulting.com</a></li>
+                <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/sam-ginzberg/" target="_blank" rel="noopener noreferrer">Sam Ginzberg on LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div>
+        © 2025 SG Consulting | samg consulting dot com
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#top">Back to top</a>
+    </div>
+</footer>
+
+</body>
+</html>
