@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SG Consulting</title>
+    <title>SG Consulting | Operations and Automation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,6 +24,9 @@
         header p {
             font-size: 1.2em;
             margin-top: 10px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .btn {
             display: inline-block;
@@ -33,6 +36,10 @@
             text-decoration: none;
             margin-top: 20px;
             border-radius: 4px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            opacity: 0.9;
         }
         section {
             padding: 50px 20px;
@@ -43,12 +50,15 @@
             color: #004080;
             margin-bottom: 20px;
         }
-        .services, .case-studies {
+        h3 {
+            margin-top: 0;
+        }
+        .services, .case-studies, .why-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
-        .service, .case-study {
+        .service, .case-study, .why-item {
             background: #f4f4f4;
             padding: 20px;
             border-radius: 4px;
@@ -75,7 +85,7 @@
             text-decoration: underline;
         }
         @media(max-width: 700px){
-            .services, .case-studies {
+            .services, .case-studies, .why-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -85,68 +95,148 @@
 
 <!-- Header / Hero -->
 <header>
-    <h1>Where Results Exceed Expectations</h1>
-    <p>Practical, hands-on operational solutions for small and mid-sized businesses.</p>
-    <a href="#contact" class="btn">Reach Out</a>
+    <h1>Operations and automation that actually get implemented</h1>
+    <p>
+        Practical, hands-on improvements for healthcare, insurance, distribution, and other service-driven businesses.
+        We fix bottlenecks, automate the right work, and stay involved until the new process works for your team.
+    </p>
+    <a href="#contact" class="btn">Schedule a quick call</a>
 </header>
 
 <!-- About -->
 <section id="about">
     <h2>About SG Consulting</h2>
-    <p>SG Consulting helps businesses identify bottlenecks, streamline operations, and implement solutions that drive measurable results. We don’t just give recommendations—we make them happen.</p>
-    <p>We specialize in helping small to mid-sized companies uncover hidden inefficiencies and implement solutions that stick. Our approach is ethical, analytical, and collaborative, bringing fresh, modern systems thinking to every project.</p>
+    <p>
+        SG Consulting helps growing organizations uncover hidden inefficiencies, redesign workflows, and build simple,
+        reliable systems around the way they actually operate, not the way a slide deck says they should.
+    </p>
+    <p>
+        With experience spanning operations leadership, IT, and risk and insurance, we bridge strategy and execution.
+        That means you get clear analysis, realistic recommendations, and hands-on support to implement changes
+        without overwhelming your team.
+    </p>
 </section>
 
 <!-- Services -->
 <section id="services">
-    <h2>Our Services</h2>
+    <h2>What We Do</h2>
     <div class="services">
         <div class="service">
             <h3>Operational Analysis</h3>
-            <p>Deep dives into departments, uncovering inefficiencies and hidden costs.</p>
+            <p>
+                Department by department reviews to map workflows, quantify waste, and identify quick wins as well
+                as structural issues. You get a clear picture of what is slowing you down and what to fix first.
+            </p>
         </div>
         <div class="service">
             <h3>Process Optimization</h3>
-            <p>Streamline tasks, reduce duplication, and create KPI-driven accountability.</p>
+            <p>
+                Redesign tasks, handoffs, and approvals to reduce duplication, close gaps, and improve accountability.
+                We build simple SOPs and KPI dashboards so you can monitor performance and keep improvements in place.
+            </p>
         </div>
         <div class="service">
-            <h3>Automation & Systems</h3>
-            <p>Implement modern systems that increase efficiency, transparency, and scalability.</p>
+            <h3>Automation and Systems</h3>
+            <p>
+                Select and implement tools, dashboards, and automations that remove manual work without creating
+                complexity. From spreadsheets and Access to cloud platforms and integrations, we work within
+                the tools you already use where possible.
+            </p>
         </div>
         <div class="service">
             <h3>Hands-On Implementation</h3>
-            <p>We don’t just advise—we execute, or bring in our network to get solutions implemented quickly and effectively.</p>
+            <p>
+                We do not stop at the recommendation stage. We work with your staff, vendors, and partners to put
+                new processes into production, train users, and adjust until the system is stable and self sustaining.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Why SG Consulting -->
+<section id="why">
+    <h2>Why SG Consulting</h2>
+    <div class="why-grid">
+        <div class="why-item">
+            <h3>Operator first, consultant second</h3>
+            <p>
+                Experience running operations and technology in real organizations, not just observing from the outside.
+                We understand the trade offs, constraints, and realities your team faces.
+            </p>
+        </div>
+        <div class="why-item">
+            <h3>Data and accountability built in</h3>
+            <p>
+                Every engagement includes clear metrics, reporting, and ownership so you can see what improved,
+                by how much, and who is responsible for keeping it on track.
+            </p>
+        </div>
+        <div class="why-item">
+            <h3>Simple and practical solutions</h3>
+            <p>
+                We aim for the smallest change that delivers a meaningful result. In many cases we start with process
+                and basic tools before recommending heavy platforms or complex systems.
+            </p>
+        </div>
+        <div class="why-item">
+            <h3>Flexible engagement</h3>
+            <p>
+                From short assessments to deeper implementation projects, we tailor the scope to your size, budget,
+                and urgency, and we stay involved as needed to make sure changes stick.
+            </p>
         </div>
     </div>
 </section>
 
 <!-- Case Studies / Results -->
 <section id="case-studies">
-    <h2>Proven Results</h2>
+    <h2>Selected Results</h2>
     <div class="case-studies">
         <div class="case-study">
-            <h3>Healthcare</h3>
-            <p>Streamlined contract and compliance workflows, reducing errors by 25%.</p>
+            <h3>Healthcare Operations</h3>
+            <p>
+                Reworked visit tracking, compliance workflows, and communication between offices for a multi site
+                homecare provider. Reduced contract and compliance errors by approximately 25 percent and improved visibility
+                into missed visits and follow up actions.
+            </p>
         </div>
         <div class="case-study">
-            <h3>Government Contracting</h3>
-            <p>Identified high-value opportunities and aligned strengths for competitive bids.</p>
+            <h3>Government and Public Sector</h3>
+            <p>
+                Helped a boutique insurance brokerage align internal processes, data, and positioning to pursue complex
+                municipal and airport RFPs. Built repeatable checklists and templates that shortened response time and
+                improved quality and consistency.
+            </p>
         </div>
         <div class="case-study">
-            <h3>Private Sector</h3>
-            <p>Improved dashboarding as well as operations, enhanced reporting, KPI/SLA .</p>
+            <h3>Distribution and Logistics</h3>
+            <p>
+                Analyzed order to delivery workflow for a distribution firm, identifying delays, rework, and manual steps.
+                Implemented clearer responsibilities and simple tracking tools to reduce errors and support future automation.
+            </p>
+        </div>
+        <div class="case-study">
+            <h3>Professional Services and Agencies</h3>
+            <p>
+                Designed reporting and automation around CRM, payroll, and analytics for service businesses.
+                Leadership gained consistent KPI views across locations and reduced time spent assembling manual reports.
+            </p>
         </div>
     </div>
 </section>
 
 <!-- Contact -->
 <section id="contact">
-    <h2>Contact Me</h2>
+    <h2>Let us talk</h2>
+    <p>
+        If you are dealing with bottlenecks, scattered systems, or processes that do not scale, a short conversation
+        is often enough to see whether SG Consulting can help. If we are not the right fit, you will hear that as well.
+    </p>
     <ul class="contact-list">
         <li>📞 <a href="tel:+19177234811">+1 917-723-4811</a></li>
-        <li>💬 <a href="https://wa.me/19177234811" target="_blank">WhatsApp</a></li>
+        <li>💬 <a href="https://wa.me/19177234811" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
         <li>✉️ <a href="mailto:sam@samg-consulting.com">sam@samg-consulting.com</a></li>
-        <li>🔗 <a href="https://www.linkedin.com/in/sam-ginzberg/" target="_blank">LinkedIn Profile</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/sam-ginzberg/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
     </ul>
 </section>
 
@@ -157,5 +247,3 @@
 
 </body>
 </html>
-
-
