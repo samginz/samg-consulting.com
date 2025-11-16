@@ -414,10 +414,8 @@
         }
 
         .contact-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 26px;
-            align-items: start;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .contact-list {
@@ -439,60 +437,6 @@
 
         .contact-list a:hover {
             text-decoration: underline;
-        }
-
-        .contact-form {
-            background: rgba(15, 23, 42, 0.9);
-            border-radius: var(--radius-card);
-            padding: 20px 18px;
-            box-shadow: var(--shadow-soft);
-        }
-
-        .contact-form label {
-            display: block;
-            font-size: 0.85rem;
-            margin-bottom: 4px;
-            color: #e5e7eb;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            border-radius: 10px;
-            border: 1px solid rgba(148, 163, 184, 0.9);
-            padding: 8px 10px;
-            margin-bottom: 10px;
-            font-size: 0.92rem;
-            font-family: inherit;
-            background: #020617;
-            color: #f9fafb;
-        }
-
-        .contact-form textarea {
-            min-height: 90px;
-            resize: vertical;
-        }
-
-        .contact-form button {
-            margin-top: 4px;
-            border-radius: 999px;
-            padding: 10px 18px;
-            border: none;
-            background: var(--color-accent);
-            color: #111827;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 0.95rem;
-        }
-
-        .contact-form button:hover {
-            opacity: 0.9;
-        }
-
-        .contact-note {
-            margin-top: 6px;
-            font-size: 0.8rem;
-            color: #cbd5f5;
         }
 
         /* Footer */
@@ -520,10 +464,6 @@
             }
 
             .about-highlights {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-layout {
                 grid-template-columns: 1fr;
             }
 
@@ -772,93 +712,4 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-quote">
-                    “Sam significantly improved our operational efficiencies. He combines sharp analysis with a proactive
-                    approach and does not hesitate to take on complex challenges directly. He is a strong asset to any
-                    project or team.”
-                </div>
-                <div class="testimonial-author">David, CEO</div>
-                <div class="testimonial-role">IT company</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-quote">
-                    “Sam is one of the best people I have worked with. He stood up a back office quickly and helped the
-                    client generate revenue faster than expected. He asks smart questions and understands industries from
-                    healthcare to fintech.”
-                </div>
-                <div class="testimonial-author">Alan, CEO</div>
-                <div class="testimonial-role">Consulting firm</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-quote">
-                    “Sam is exceptional at problem solving and performance optimization. He understands the drivers behind
-                    complex issues and breaks them into manageable steps. Through hands on work and coaching, he lifts
-                    the performance of the whole team.”
-                </div>
-                <div class="testimonial-author">Sean, CEO</div>
-                <div class="testimonial-role">Warranty company</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-quote">
-                    “Sam is a doer, not just a talker. He is loyal, reliable, and highly responsive. He balances attention
-                    to detail with a clear view of strategy and delivers pragmatic solutions that drive value. His performance
-                    was consistently above expectations.”
-                </div>
-                <div class="testimonial-author">Ariel, Executive VP</div>
-                <div class="testimonial-role">Insurance company</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="section-contact">
-    <div class="section-inner">
-        <div class="section-heading">
-            <h2>Let us talk</h2>
-            <p>
-                If you are dealing with bottlenecks, scattered systems, or processes that do not scale, a short conversation
-                is often enough to see whether SG Consulting can help. If it is not a fit, you will hear that as well.
-            </p>
-        </div>
-        <div class="contact-layout">
-            <div>
-                <ul class="contact-list">
-                    <li>📞 Phone: <a href="tel:+19177234811">+1 917 723 4811</a></li>
-                    <li>💬 WhatsApp: <a href="https://wa.me/19177234811" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
-                    <li>✉ Email: <a href="mailto:sam@samg-consulting.com">sam@samg-consulting.com</a></li>
-                    <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/sam-ginzberg/" target="_blank" rel="noopener noreferrer">Sam Ginzberg on LinkedIn</a></li>
-                </ul>
-            </div>
-            <div>
-                <form class="contact-form" onsubmit="return false;">
-                    <label for="name">Name</label>
-                    <input id="name" type="text" placeholder="Your name">
-
-                    <label for="email">Email</label>
-                    <input id="email" type="email" placeholder="you@example.com">
-
-                    <label for="company">Company</label>
-                    <input id="company" type="text" placeholder="Organization name">
-
-                    <label for="message">What would you like to improve</label>
-                    <textarea id="message" placeholder="Briefly describe the main challenge or area you want to address"></textarea>
-
-                    <button type="submit">Send inquiry</button>
-                    <div class="contact-note">
-                        This form is for illustration. You can connect directly by phone, WhatsApp, or email if you prefer.
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div>
-        © 2025 SG Consulting | samg consulting dot com
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="#top">Back to top</a>
-    </div>
-</footer>
-
-</body>
-</html>
+                    “Sam significantly improved our operational efficiencies. He combines sha
