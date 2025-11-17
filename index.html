@@ -857,6 +857,60 @@
 </head>
 <body>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SG Consulting Contact</title>
+<style>
+    .contact-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .contact-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .contact-list li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    /* Hover colors */
+    .contact-list li.phone a:hover { color: #555; }
+    .contact-list li.whatsapp a:hover { color: #25D366; }
+    .contact-list li.email a:hover { color: #555; }
+    .contact-list li.linkedin a:hover { color: #D19C4F; }
+
+    /* Icon hover effects */
+    .contact-list li img {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.2s ease, filter 0.2s ease, drop-shadow 0.2s ease;
+    }
+
+    .contact-list li img:hover {
+        transform: scale(1.15);
+    }
+
+    /* LinkedIn icon color adjustment (warmer) */
+    .contact-list li.linkedin img {
+        filter: sepia(1) saturate(5) hue-rotate(20) brightness(0.8);
+    }
+    .contact-list li.linkedin img:hover {
+        filter: sepia(1) saturate(6) hue-rotate(20) brightness(1.1) drop-shadow(0 0 3px #D19C4F);
+    }
+</style>
+</head>
+<body>
+
 <section id="contact" class="section-contact">
     <div class="section-inner">
         <div class="section-heading">
@@ -868,30 +922,31 @@
         </div>
         <div class="contact-layout">
             <ul class="contact-list">
-                
+
                 <!-- Phone -->
-                <li>
+                <li class="phone">
                     <img src="https://cdn-icons-png.flaticon.com/512/15/15925.png" alt="Phone">
                     <a href="tel:+19177234811" data-tooltip="Call me">Click here</a>
                 </li>
 
                 <!-- WhatsApp -->
-                <li>
+                <li class="whatsapp">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
                     <a href="https://wa.me/19177234811" target="_blank" rel="noopener noreferrer" data-tooltip="Chat on WhatsApp">Click here</a>
                 </li>
 
                 <!-- Email -->
-                <li>
-                    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+                <li class="email">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
                     <a href="mailto:sam@samg-consulting.com" data-tooltip="Send me an email">Click here</a>
                 </li>
-                
+
                 <!-- LinkedIn -->
-                <li>
+                <li class="linkedin">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
                     <a href="https://www.linkedin.com/in/sam-ginzberg/" target="_blank" rel="noopener noreferrer" data-tooltip="View my LinkedIn profile">Click here</a>
                 </li>
+
             </ul>
         </div>
     </div>
