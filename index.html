@@ -887,7 +887,7 @@
     .contact-list li.phone a:hover { color: #555; }
     .contact-list li.whatsapp a:hover { color: #25D366; }
     .contact-list li.email a:hover { color: #555; }
-    .contact-list li.linkedin a:hover { color: #A86C3D; }
+    .contact-list li.linkedin a:hover { color: #A0522D; }
 
     /* Icon hover effects */
     .contact-list li img {
@@ -900,15 +900,13 @@
         transform: scale(1.15);
     }
 
-    /* LinkedIn icon color adjustment (warmer brown with subtle gradient and shadow) */
+    /* LinkedIn icon color adjustment (darker brown/orange-brown) */
     .contact-list li.linkedin img {
-        filter: sepia(1) saturate(5) hue-rotate(15) brightness(0.8);
-        /* add soft drop shadow */
-        filter: sepia(1) saturate(5) hue-rotate(15) brightness(0.8) drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+        filter: sepia(1) saturate(4) hue-rotate(10) brightness(0.9) drop-shadow(0 1px 2px rgba(0,0,0,0.3));
     }
 
     .contact-list li.linkedin img:hover {
-        filter: sepia(1) saturate(6) hue-rotate(15) brightness(1.1) drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+        filter: sepia(1) saturate(5) hue-rotate(10) brightness(1.1) drop-shadow(0 2px 4px rgba(0,0,0,0.4));
     }
 </style>
 </head>
@@ -926,9 +924,9 @@
         <div class="contact-layout">
             <ul class="contact-list">
 
-                <!-- Phone -->
+                <!-- Phone (classic handset icon) -->
                 <li class="phone">
-                    <img src="https://cdn-icons-png.flaticon.com/512/15/15925.png" alt="Phone">
+                    <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Phone">
                     <a href="tel:+19177234811" data-tooltip="Call me">Click here</a>
                 </li>
 
@@ -944,7 +942,7 @@
                     <a href="mailto:sam@samg-consulting.com" data-tooltip="Send me an email">Click here</a>
                 </li>
 
-                <!-- LinkedIn -->
+                <!-- LinkedIn (darker brown/orange-brown) -->
                 <li class="linkedin">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
                     <a href="https://www.linkedin.com/in/sam-ginzberg/" target="_blank" rel="noopener noreferrer" data-tooltip="View my LinkedIn profile">Click here</a>
