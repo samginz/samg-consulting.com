@@ -884,10 +884,10 @@
     }
 
     /* Hover colors */
-    .contact-list li.phone a:hover { color: #555; }
+    .contact-list li.phone a:hover { color: #008080; } /* teal */
     .contact-list li.whatsapp a:hover { color: #25D366; }
-    .contact-list li.email a:hover { color: #D44638; } /* classic red for envelope */
-    .contact-list li.linkedin a:hover { color: #A0522D; } /* brownish hover */
+    .contact-list li.email a:hover { color: #D44638; } /* red envelope */
+    .contact-list li.linkedin a:hover { color: #A0522D; } /* brownish */
 
     .contact-list li img {
         width: 24px;
@@ -901,9 +901,19 @@
         transform: scale(1.15);
     }
 
+    /* Phone icon color filter (teal) */
+    .contact-list li.phone img {
+        filter: invert(39%) sepia(40%) saturate(1801%) hue-rotate(163deg) brightness(0.95);
+    }
+
     /* LinkedIn icon color filter (brown/orange-brown) */
     .contact-list li.linkedin img {
         filter: sepia(1) saturate(4) hue-rotate(15deg) brightness(0.9);
+    }
+
+    /* Email icon color filter (red) */
+    .contact-list li.email img {
+        filter: invert(28%) sepia(87%) saturate(700%) hue-rotate(0deg) brightness(0.95);
     }
 </style>
 </head>
@@ -921,7 +931,7 @@
         <div class="contact-layout">
             <ul class="contact-list">
 
-                <!-- Phone (classic handset icon) -->
+                <!-- Phone (classic handset icon, teal color) -->
                 <li class="phone">
                     <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Phone">
                     <a href="tel:+19177234811">Click here</a>
@@ -933,7 +943,7 @@
                     <a href="https://wa.me/19177234811" target="_blank" rel="noopener noreferrer">Click here</a>
                 </li>
 
-                <!-- Email (simple envelope icon) -->
+                <!-- Email (classic envelope, red) -->
                 <li class="email">
                     <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
                     <a href="mailto:sam@samg-consulting.com">Click here</a>
