@@ -887,7 +887,7 @@
     .contact-list li.phone a:hover { color: #555; }
     .contact-list li.whatsapp a:hover { color: #25D366; }
     .contact-list li.email a:hover { color: #555; }
-    .contact-list li.linkedin a:hover { color: #D19C4F; }
+    .contact-list li.linkedin a:hover { color: #A86C3D; }
 
     /* Icon hover effects */
     .contact-list li img {
@@ -900,12 +900,15 @@
         transform: scale(1.15);
     }
 
-    /* LinkedIn icon color adjustment (warmer) */
+    /* LinkedIn icon color adjustment (warmer brown with subtle gradient and shadow) */
     .contact-list li.linkedin img {
-        filter: sepia(1) saturate(5) hue-rotate(20) brightness(0.8);
+        filter: sepia(1) saturate(5) hue-rotate(15) brightness(0.8);
+        /* add soft drop shadow */
+        filter: sepia(1) saturate(5) hue-rotate(15) brightness(0.8) drop-shadow(0 1px 2px rgba(0,0,0,0.3));
     }
+
     .contact-list li.linkedin img:hover {
-        filter: sepia(1) saturate(6) hue-rotate(20) brightness(1.1) drop-shadow(0 0 3px #D19C4F);
+        filter: sepia(1) saturate(6) hue-rotate(15) brightness(1.1) drop-shadow(0 2px 4px rgba(0,0,0,0.4));
     }
 </style>
 </head>
